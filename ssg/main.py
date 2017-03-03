@@ -95,7 +95,7 @@ def create_matrix(totals, filter, start=0, odd=False):
         while x < total_x:
             # TODO: Blank all points before starting coords
             if bool(i % 2) != odd:  # xor operator for two boolean variables
-                row.append(blank)
+                blank_pos.append(x)
             elif filtered(filter, (x, y)):
                 blank_pos.append(x)
                 x += 1

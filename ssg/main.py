@@ -41,7 +41,7 @@ def init_args():
     parser.add_argument('filename', metavar='NAME', default='test.csv',
                         type=str, help='file name to write to, should end in '
                         'csv')
-    parser.add_argument('odd', action='store_true', default=True,
+    parser.add_argument('--odd', action='store_true', default=True,
                         help='whether to write odd or even columns')
     return parser.parse_args()
 

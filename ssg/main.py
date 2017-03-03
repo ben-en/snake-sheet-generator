@@ -49,7 +49,7 @@ def init_args():
 def load_filter():
     """ loads file FILTER, returns filter matrix """
     if not os.path.isfile(FILTER):
-        print('No filter found, creating square grid')
+        print('no filter found, creating square grid')
         return []
     with open(FILTER, 'r') as ff:
         reader = csv.reader(ff)
@@ -60,9 +60,6 @@ def load_filter():
         # ar = numpy.rot90(ar, k=3, axes=(0, 1))
         # ar = numpy.swapaxes(ar, 0, 1)
         f = list(map(list, ar))
-        print('filter')
-        for i in f:
-            print(f)
         return f
 
 
@@ -102,7 +99,6 @@ def create_matrix(totals, filter, start=0, odd=False):
             if bool(i % 2) and odd:
                 row.append(blank)
             elif filtered(filter, (x, y)):
-                print('filtered: (' + str(x) + ', ' + str(y) + ')')
                 blank_pos.append(x)
                 x += 1
                 continue

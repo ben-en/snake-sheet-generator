@@ -7,7 +7,8 @@ particular fields (coordinates) from being used. With no filter, it would
 generate something like the following:
 
 >
-  ~# python numbers-to-csv.py 2 5 5 out.csv
+      ~# python numbers-to-csv.py 2 5 5 out.csv
+  
       [2,  '', 12, '', 22]
       ['', 10, '', 20, '']
       [4,  '', 14, '', 24]
